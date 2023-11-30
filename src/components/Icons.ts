@@ -1,8 +1,8 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faRefresh } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 /* add icons to the library */
-[faDownload].forEach((icon: any) => {
+[faDownload, faRefresh].forEach((icon: any) => {
   library.add(icon);
 });
 
