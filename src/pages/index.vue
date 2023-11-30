@@ -39,9 +39,9 @@
     return new URL(`../assets/images/${no}.jpg`, import.meta.url).href;
   };
 
-  const getJSONUrl = (no: string) => {
-    return new URL(`../json/${no}.json`, import.meta.url).href;
-  };
+  // const getJSONUrl = (no: string) => {
+  //   return new URL(`../json/${no}.json`, import.meta.url).href;
+  // };
 
   const countOfPOW: any = {
     '7': 4096,
@@ -74,11 +74,10 @@
   };
 
   const download = (no: string) => {
-    const url = getJSONUrl(no);
-    console.log(url);
     let a: any = document.createElement('a');
-    a.href = url;
-    a.download = `${no}.json`;
+    a.setAttribute('id', 'd_' + Math.floor(Math.random() * 1000));
+    a.setAttribute('href', `/json/${no}.json`);
+    a.setAttribute('download', `${no}.json`);
     a.click();
     a = null;
   };
