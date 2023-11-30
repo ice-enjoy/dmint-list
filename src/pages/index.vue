@@ -76,8 +76,8 @@
   const download = (no: string) => {
     let a: any = document.createElement('a');
     a.setAttribute('id', 'd_' + Math.floor(Math.random() * 1000));
-    a.setAttribute('href', `/json/${no}.json`);
-    a.setAttribute('download', `${no}.json`);
+    a.setAttribute('href', `/json/item-${no}.json`);
+    a.setAttribute('download', `item-${no}.json`);
     a.click();
     a = null;
   };
