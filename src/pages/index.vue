@@ -33,6 +33,8 @@
 </template>
 
 <script lang="ts" setup>
+  import { message } from 'ant-design-vue';
+
   const powRange = new Array(16 - 7).fill(0).map((_, index: number) => index + 7);
   const bitworkc = '43721943aea61c6';
   const getImageUrl = (no: number) => {
@@ -80,6 +82,8 @@
     a.setAttribute('download', `item-${no}.json`);
     a.click();
     a = null;
+    // better tips message
+    message.success(`JSON File: ${`item-${no}.json`} has been successfully downloaded!`);
   };
 
   onMounted(() => {
