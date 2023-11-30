@@ -12,12 +12,16 @@
           </span>
         </div>
 
-        <div class="flex gap-1">
-          <div class="icon-btn" @click="refreshNumber(n)">
-            <font-awesome-icon
+        <div class="flex gap-1 flex-shrink-0">
+          <div
+            class="icon-btn !w-fit bg-main text-black hover:!text-black"
+            @click="refreshNumber(n)"
+          >
+            <!-- <font-awesome-icon
               icon="fa-solid fa-refresh"
               class="active:animate-spin"
-            ></font-awesome-icon>
+            ></font-awesome-icon> -->
+            🚀 Lucky
           </div>
 
           <div class="icon-btn" @click="download(`${n}${currentCountOfPOW[n]}`)">
@@ -112,7 +116,8 @@
   }
 
   .icon-btn {
-    @apply border-1 border-solid border-white/10 w-8 aspect-1 flex-col-center rounded-md group cursor-pointer hover:text-main;
+    @apply border-1 border-solid border-white/10 min-w-8 min-h-8 flex-center gap-1 rounded-md group cursor-pointer hover:text-main;
+    @apply px-4 flex-shrink-0 active:scale-96 text-sm;
   }
 
   button {
